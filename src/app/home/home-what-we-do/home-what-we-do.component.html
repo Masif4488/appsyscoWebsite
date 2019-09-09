@@ -1,0 +1,28 @@
+<section class="whatWeDo-sec">
+    <div class="container">
+       <div class="row">
+          <div class="col-lg-12">
+             <h1>What We <span>Do</span></h1>
+             <div class="headingBottomArea blue">
+                <div class="headingShape"></div>
+                <div class="headingShapeIcon"></div>
+             </div>
+          </div>
+       </div>
+       <div class="row">
+          <div class="col-lg-3" *ngFor="let wwd of whatWeDo">
+             <div class="whatWeDoImg">
+                <img [src]= wwd.img alt="">
+                <div class="whatWeDoIcon">
+                   <img [src]= wwd.image_icon alt="">
+                </div>
+                <div class="overlay"></div>
+             </div>
+             <div class="whatWeDoCon">
+                <h3>{{wwd.headings}}</h3>
+                <p>{{wwd.contents}}</p>
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>

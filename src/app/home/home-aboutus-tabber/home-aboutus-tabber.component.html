@@ -1,0 +1,150 @@
+<section class="about-sec aboutTabber">
+    <div class="container">
+       <div class="row">
+          <div class="col-lg-12">
+             <h1>About <span>Us</span></h1>
+             <div class="headingBottomArea blue">
+                <div class="headingShape"></div>
+                <div class="headingShapeIcon"></div>
+             </div>
+          </div>
+       </div>
+       <div class="row tabber-row">
+          <div class="col-md-3">
+             <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" [ngClass]="!missions && histories && !visions && !processes && !teams ? 'active' : ''"  class="history-icon"><a (click)="history();" aria-controls="history" role="tab" data-toggle="tab">
+                   Our History</a>
+                </li>
+                <li role="presentation" [ngClass]="missions && !histories && !visions && !processes && !teams ? 'active' : ''"  class="mission-icon"><a (click)="mission();" aria-controls="mission" role="tab" data-toggle="tab">
+                   Our Mission</a>
+                </li>
+                <li role="presentation" [ngClass]="!missions && !histories && visions && !processes && !teams ? 'active' : ''" class="vision-icon"><a (click)="vision();" aria-controls="vision" role="tab" data-toggle="tab">
+                   Our Vision</a>
+                </li>
+                <li role="presentation" [ngClass]="!missions && !histories && !visions && processes && !teams ? 'active' : ''"  class="process-icon"><a (click)="process();" aria-controls="process" role="tab" data-toggle="tab">
+                   Our Process</a>
+                </li>
+                <li role="presentation" [ngClass]="!missions && !histories && !visions && !processes && teams? 'active' : ''" class="team-icon"><a (click)="team();" aria-controls="team" role="tab" data-toggle="tab">
+                   Our Team</a>
+                </li>
+             </ul>
+          </div>
+          <div class="col-md-9">
+             <div class="tab-content">
+                <div role="tabpanel" class="active animated"  [ngClass]="!missions && histories && !visions && !processes && !teams ? 'zoomIn' : 'fadeOut'" id="history" *ngIf="!missions && histories && !visions && !processes && !teams">
+                   <h2>Our History</h2>
+                   <p>Established on 4 July 2014, Appsysco is a brainchild of digital marketing experts and web developers. With over 5 years of experience, the company has provided digital marketing and web solutions to more than 100 clients across the world. From digital branding, marketing to Android, iPhone app development, we provide end-to-end solutions that have set universal benchmarks of quality performance and productivity.</p>
+                   <div class="row img-block">
+                      <div class="col-sm-4">
+                         <img src="assets/images/missionImg1.jpg" alt="">
+                      </div>
+                      <div class="col-sm-4">
+                         <img src="assets/images/missionImg2.jpg" alt="">
+                      </div>
+                      <div class="col-sm-4">
+                         <img src="assets/images/missionImg3.jpg" alt="">
+                      </div>
+                   </div>
+                   <ul class="tabList">
+                      <li>Our online solutions help clients achieve a high ROI</li>
+                      <li>We make sure that Your digital marketing strategy is Result-driven</li>
+                      <li>Worked with many leading local and international clients so far</li>
+                      <li>Believe in building lasting relationships with our clients </li>
+                   </ul>
+                </div>
+
+                <div role="tabpanel" class="animated" [ngClass]="missions && !histories && !visions && !processes && !teams ? 'zoomIn' : 'fadeOut'" *ngIf="missions && !histories && !visions && !processes && !teams">
+                   <h2>OUR MISSION</h2>
+                   <p>Our mission is to create tailored-fit solutions for corporate houses by implementing the most efficient and effective digitally-driven services with a concrete impact on the production of leads and revenues of businesses regularly.  We combine the innovative design and research-based strategy to help our client’s audiences have the never-ending experiences.</p>
+                   <div class="row img-block">
+                      <div class="col-sm-4">
+                         <img src="assets/images/missionImg1.jpg" alt="">
+                      </div>
+                      <div class="col-sm-4">
+                         <img src="assets/images/missionImg2.jpg" alt="">
+                      </div>
+                      <div class="col-sm-4">
+                         <img src="assets/images/missionImg3.jpg" alt="">
+                      </div>
+                   </div>
+                   <ul class="tabList">
+                      <li>Build a platform of state-of-the-art SEO and SMM solutions</li>
+                      <li>We partner with people who want to win the digital world</li>
+                      <li>Our Team conducts best quality checks at every phase of the project</li>
+                      <li>All our projects are delivered before the deadline</li>
+                      <li>We provide the unmatched customer support</li>
+                      <li>Our ultimate goal is to offer the complete customer satisfaction</li>
+                   </ul>
+                </div>
+                <div role="tabpanel" id="vision" class="animated" [ngClass]="!missions && !histories && visions && !processes && !teams ? 'zoomIn' : 'fadeOut'" *ngIf="!missions && !histories && visions && !processes && !teams">
+                   <h2>Our Vision</h2>
+                   <p>Appsysco are highly committed to bring a unique technological and marketing revolution in the world of digital world. With an objective to be the world’s best digital marketing and web development services provider, we strive hard to help our clients fulfill their all online dreams by allowing them to increase revenue every month and every year.</p>
+                   <div class="row img-block">
+                      <div class="col-sm-4">
+                         <img src="assets/images/missionImg1.jpg" alt="">
+                      </div>
+                      <div class="col-sm-4">
+                         <img src="assets/images/missionImg2.jpg" alt="">
+                      </div>
+                      <div class="col-sm-4">
+                         <img src="assets/images/missionImg3.jpg" alt="">
+                      </div>
+                   </div>
+                   <ul class="tabList">
+                      <li>Help our clients to get connected with their audiences</li>
+                      <li>Build better brands through fine digital experiences</li>
+                      <li>Create tailored-fit solutions for our client’s various business needs</li>
+                      <li>Have a disciplined approach to finish every project on time</li>
+                      <li>Provide the highest value of satisfaction to every client</li>
+                      <li>Build our client’s reputation by improving their online presence</li>
+                   </ul>
+                </div>
+                <div role="tabpanel"  id="process" class="animated" [ngClass]="!missions && !histories && !visions && processes && !teams ? 'zoomIn' : 'fadeOut'"  *ngIf="!missions && !histories && !visions && processes && !teams">
+                   <h2>Our Process</h2>
+                   <p>The journey of transforming a small business into great BRANDS actually begins with quality work led by a squad of our high-skilled and certified IT professionals. The process of making your business a big success is very simple and easy.</p>
+                   <div class="row img-block">
+                      <div class="col-sm-4">
+                         <img src="assets/images/missionImg1.jpg" alt="">
+                      </div>
+                      <div class="col-sm-4">
+                         <img src="assets/images/missionImg2.jpg" alt="">
+                      </div>
+                      <div class="col-sm-4">
+                         <img src="assets/images/missionImg3.jpg" alt="">
+                      </div>
+                   </div>
+                   <ul class="tabList">
+                      <li>Transparent and crystal-clear</li>
+                      <li>Simple and easy-to-follow steps</li>
+                      <li>Designed for businesses with different sizes and budget</li>
+                   </ul>
+                </div>
+                <div role="tabpanel"  id="team" class="animated" [ngClass]="!missions && !histories && !visions && !processes && teams? 'zoomIn' : 'fadeOut'" *ngIf="!missions && !histories && !visions && !processes && teams">
+                   <h2>Our Team</h2>
+                   <p>Appsysco welcomes a team of professionals who are as passionate and dedicated as we are for our business objectives.  We through our highly educated team offer complete digital marketing solutions, including Search Engine Optimization, Social Media Marketing, Pay-Per-Click, Inbound Marketing, Web Design, Web Development and more.</p>
+                   <div class="row img-block">
+                      <div class="col-sm-4">
+                         <img src="assets/images/missionImg3.jpg" alt="">
+                      </div>
+                      <div class="col-sm-4">
+                         <img src="assets/images/missionImg1.jpg" alt="">
+                      </div>
+                      <div class="col-sm-4">
+                         <img src="assets/images/missionImg2.jpg" alt="">
+                      </div>
+                   </div>
+                   <ul class="tabList">
+                      <li>We boast a team with matchless expertise in varied facets of Internet development</li>
+                      <li>Our quality team helps you get an advantage over your competitors</li>
+                      <li>Our professionals strive for continuous innovation and creativity</li>
+                      <li>We make sure that our results help our clients stay ahead of the market</li>
+                      <li>Our work is evidence-based and powered by strategic innovation</li>
+                      <li>Our experts ace your branding, aesthetics and visual aspects of your website</li>
+                   </ul>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+
+ </section>

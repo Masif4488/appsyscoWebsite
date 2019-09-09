@@ -1,0 +1,17 @@
+
+.ng-invalid.ng-dirty:not(form), .ng-invalid:not(form).form-submitted {
+  border: solid 2px lightcoral;
+}
+a.quote-btn {
+  cursor: pointer;
+}
+.Invalid-feedback {
+  color: #ff0000;
+}
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+.col-lg-9.contactusForm {
+  margin: 0px auto;
+}
+

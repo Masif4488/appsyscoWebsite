@@ -1,0 +1,94 @@
+<header class="header">
+    <div class="header1">
+        <div class="container">
+           <div class="row">
+               <div class="col-md-2 logo">
+                 <a routerLink="/home"><img src="assets/images/logo.png" alt="headerLogo"></a>
+               </div>
+              <div class="col-md-10">
+                 <ul class="call-mail-detail">
+                    <li>
+                       <img src="assets/images/mail.png" alt="">
+                       <span><strong>Mail us today :</strong><br> <a href="mailto:contact@appsysco.com">contact@appsysco.com</a></span>
+                    </li>
+                 </ul>
+              </div>
+           </div>
+        </div>
+     </div>
+     <div class="header2">
+        <div class="container">
+                <div class="row">
+                   <div class="col-md-8">
+                      <div class="navigation">
+                         <nav class="navbar navbar-default">
+                            <div class="navbar-header">
+                               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                               <span class="sr-only">Toggle navigation</span>
+                               <span class="icon-bar"></span>
+                               <span class="icon-bar"></span>
+                               <span class="icon-bar"></span>
+                               </button>
+                            </div>
+                            <div class="collapse show navbar-collapse" id="bs-example-navbar-collapse-1">
+                               <ul class="nav navbar-nav">
+                                  <li *ngFor="let menus of routers">
+                                      <a routerLinkActive="active" [routerLink]= menus.url>{{menus.linkName}}</a>
+                                    </li>
+                               </ul>
+                            </div>
+                         </nav>
+                         <a class="toggle"></a>
+                         <nav id="menu" class="mbmenu">
+                            <ul class="nav navbar-nav">
+                              <li *ngFor="let menus of routers">
+                                    <a routerLinkActive="active" [routerLink]= menus.url>{{menus.linkName}}</a>
+                                  </li>
+                            </ul>
+                         </nav>
+                      </div>
+                   </div>
+                  <div class="col-md-4">
+                      <a class="quote-btn" (click)="openQuoteModal(content)">GET A QUOTE</a>
+                    </div>
+                    <ng-template #content let-c="close" let-d="dismiss">
+                        <div class="modal-content" >
+                            <div class="modal-header">
+                                <h4 class="modal-title">GET A QUOTE</h4>
+                                <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="contact-form">
+                                <p class="success_msg1" *ngIf="showMessage">{{FormRegister}}</p>
+                                <form [formGroup]="registerForm" #myRegisterForm="ngForm" (ngSubmit)="onSubmit(registerForm)" >
+                                  <input type="name" name="name" placeholder="Name" formControlName="name" [ngClass]="{'red-border-class': f.name.errors}">
+                                  <div class= "Invalid-feedback" *ngIf="registerForm.get('name').hasError('required') && registerForm.get('name').touched">Please Enter your Name</div>
+                                  <input type="email" name="email" placeholder="Email" formControlName="email" >
+                                  <div class= "Invalid-feedback"  *ngIf="registerForm.get('email').hasError('required') && registerForm.get('email').touched">Please Enter your Email</div>
+                                  <div class= "Invalid-feedback"  *ngIf="registerForm.get('email').hasError('email') && registerForm.get('email').touched">Invalid email format.</div>
+                                  <input type="text" name="contact_number" placeholder="Phone number" formControlName="contact_number">
+                                  <div class= "Invalid-feedback"  *ngIf="registerForm.get('contact_number').hasError('required') && registerForm.get('contact_number').touched">Enter Your Mobile Number</div>
+                                  <div class= "Invalid-feedback" *ngIf="registerForm.get('contact_number').hasError('maxlength') && registerForm.get('contact_number').touched">Must be 10 digit</div>
+                                  <div class= "Invalid-feedback"  *ngIf="registerForm.get('contact_number').hasError('minlength') && registerForm.get('contact_number').touched">Must be 10 digit</div>
+                                  <textarea placeholder="Message" name="message" formControlName="message"></textarea>
+                                  <div class= "Invalid-feedback"  *ngIf="registerForm.get('message').hasError('required') && registerForm.get('message').touched">Enter Your Message</div>
+                                  <div>
+                                  <button type="submit" class="cnct_submit_btn" [disabled]="!myRegisterForm.form.valid" (click)="getQuotedForm()">{{buttonValue}}</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" (click)="c('Close click')">Close</button>
+                            </div>
+                          </div>
+                   </ng-template>
+             </div>
+          </div>
+    </div>
+  </header>
+
+
+

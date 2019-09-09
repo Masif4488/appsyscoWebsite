@@ -1,0 +1,18 @@
+.inter_error h6{
+  margin-bottom: 20px;
+}
+.internal_error {
+  display: flex;
+  justify-content: space-around;
+}
+section#for_page {
+  background: #F5F5F5;
+  padding: 150px 0;
+}
+a.btn.btn-success.homepageReturn {
+  padding: 14px;
+}
+a.btn.btn-success.homepageReturn:hover {
+  position: relative;
+
+}

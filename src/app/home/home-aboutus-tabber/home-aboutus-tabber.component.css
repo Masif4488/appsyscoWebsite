@@ -1,0 +1,11 @@
+.aboutTabber ul.nav-tabs {
+  float: left;
+  width: 100%;
+  border: none;
+  height: 359px;
+  position: relative;
+  top: 35px;
+}
+.aboutTabber ul.nav-tabs li a:hover{
+  text-decoration: none;
+}
